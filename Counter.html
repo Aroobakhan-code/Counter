@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Counter</title>
+    </head>
+        <style>
+            body{
+                background-color:#F3F0EA;
+                height: 100%;
+                width: 100%;
+            }
+            #container{
+                background-color: #B8B1A9;
+                margin-left: 40%;
+                margin-right: 30%;
+                margin-top: 20%;
+                padding: 30px;
+                text-align: center;
+                width: 20%;
+                border-radius: 10px;
+            }
+            .input{
+                font-size: 40px;
+            }
+            .btn1{
+                background-color: #71836B;
+                padding: 15px; 
+                font-size: 15px; 
+                border-radius: 10px;
+                border: none;
+                color: #F3F0EA;
+                
+            }
+            .btn2{
+                background-color: #8B6F61;
+                padding: 15px; 
+                font-size: 15px; 
+                border-radius: 10px;
+                border: none;
+            }
+            .btn3{
+                background-color: #71836B;
+                padding: 15px; 
+                font-size: 15px; 
+                border-radius: 10px;
+                border: none;
+                color: #F3F0EA;
+            }
+            .counter{
+            font-size: 40px;
+            }
+            button:hover {
+                 opacity: 0.8;
+                 
+            }
+
+
+
+        </style>
+        <body>
+            <div id="container">
+                <h1 class="counter">Counter</h1>
+               <div class="input" id="input">0</div>
+               <button class="btn1" id="increase">Increase</button>
+                <button class="btn2" id="reset">Reset</button>
+                <button class="btn3" id="decrease">Decrease</button>
+             </div>
+        </body>
+        <script>
+           let InputBtn= document.getElementById('input');
+           let IncreaseBtn= document.getElementById('increase');
+            let ResetBtn=document.getElementById('reset');
+           let DecreaseBtn= document.getElementById('decrease');
+            let count =0;
+            IncreaseBtn.addEventListener('click',() =>{
+                count++;
+                InputBtn.textContent =count;
+            });
+            ResetBtn.addEventListener('click',() =>{
+                count=0;
+                InputBtn.textContent =count;
+            });
+            DecreaseBtn.addEventListener('click',() =>{
+                count--;
+                InputBtn.textContent =count;
+            });
+            </script>
+
+</html>
